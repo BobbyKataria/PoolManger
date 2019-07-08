@@ -2,20 +2,12 @@
 
 sudo apt update -y
 
-sudo apt-get install npm -y
+sudo apt-get install git
 
 #get the latest version of nodejs
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - 
 sudo apt-get install -y nodejs
-
-#installing angular
-
-sudo npm install -g @angular/cli | -y
-
-#installing mongodb
-
-sudo apt install -y mongodb
 
 #cloning all the repos
 
@@ -25,34 +17,29 @@ cd TeamAPoolProjectBackend/
 
 git checkout Developer
 
-cd ../
+sudo npm install
 
-git clone https://github.com/Nboaram/TeamAPoolProjectUI.git
+sudo apt install -y mongodb
 
-cd TeamAPoolProjectUI
+sudo cp mongodb.service /etc/systemd/system/
+        
+sudo systemctl daemon-reload
+             
+sudo systemctl start mongodb
 
-git checkout Developer
-
-#installing all dependencies
-
-npm install -y
-
-cd ../
-
-cd TeamAPoolProjectBackend/
-
-npm install -y
+exit
 
 cd ../ 
 
-mv mongodb.service /etc/systemd/system/
+git clone https://github.com/Nboaram/TeamAPoolProjectUI.git
 
-sudo systemctl daemon-reload
+cd TeamAPoolProjectUI/
 
-sudo systemctl start mongodb
+git checkout Developer
 
+sudo npm install -y
 
-
+yes | sudo npm install -g @angular/cli
 
 
 
