@@ -2,7 +2,7 @@
 
 sudo apt update -y
 
-sudo apt-get install npm
+sudo apt-get install npm -y
 
 #get the latest version of nodejs
 
@@ -11,7 +11,7 @@ sudo apt-get install -y nodejs
 
 #installing angular
 
-sudo npm install -y -g @angular/cli
+sudo npm install -g @angular/cli | -y
 
 #installing mongodb
 
@@ -35,13 +35,13 @@ git checkout Developer
 
 #installing all dependencies
 
-npm install
+npm install -y
 
 cd ../
 
 cd TeamAPoolProjectBackend/
 
-npm install
+npm install -y
 
 cd ../ 
 
