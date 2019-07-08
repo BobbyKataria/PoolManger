@@ -17,9 +17,11 @@ cd TeamAPoolProjectUI/
 
 git checkout Developer
 
-yes | sudo npm install -y
+yes | sudo npm install
 
 cd ../
+
+#out of the UI direc
 
 git clone https://github.com/Nboaram/TeamAPoolProjectBackend.git
 
@@ -33,13 +35,11 @@ sudo apt install -y mongodb
 
 cd ../
 
+#out of the backend dir
+
 sudo cp mongodb.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
-
-sudo systemctl start mongodb
-
-exit
 
 yes | sudo npm install -g @angular/cli
 
