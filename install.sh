@@ -1,6 +1,6 @@
 #Update apt
 
-sudo apt update
+sudo apt update -y
 
 sudo apt-get install npm
 
