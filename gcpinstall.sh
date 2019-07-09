@@ -3,6 +3,10 @@
 
 curl https://sdk.cloud.google.com | bash
 
+#log in
+
+gcloud init
+
 #installing jq 
 
 sudo apt-get install jq
