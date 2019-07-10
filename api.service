@@ -2,7 +2,9 @@
 Description=Front end Index.js file
 
 [Service]
-ExecStart= /usr/bin/node ~/poolappScript/TeamAPoolProjectBackend/Index.js
+User=asiangauss
+ExecStart=/usr/bin/node /home/asiangauss/poolappScript/TeamAPoolProjectBackend/Index.js
+WorkingDirectory=/home/asiangauss/poolappScript/TeamAPoolProjectBackend
 
 [Install]
 WantedBy=multi-user.target

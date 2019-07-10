@@ -9,7 +9,7 @@ Documentation=https://docs.mongodb.org/manual
 [Service]
 User=mongodb
 Group=mongodb
-ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+ExecStart=/usr/bin/mongod 
 # Install tells systemd when the service should be automatically started.
 # `multi-user.target` means the server will be automatically started during boot.
 [Install]

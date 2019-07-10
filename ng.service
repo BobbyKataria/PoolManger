@@ -2,7 +2,8 @@
 Description=UI
 
 [Service]
-WorkingDirectory= ~/pooalappScript/TeamAPoolProjectUI
+User=asiangauss
+WorkingDirectory=/home/asiangauss/poolappScript/TeamAPoolProjectUI
 ExecStart=/usr/bin/ng s --host 0.0.0.0
 
 [Install]
