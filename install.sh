@@ -1,7 +1,8 @@
 #Update apt
 
-sudo apt update -y
-
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt install -y mongodb
 sudo apt-get install git
 
 #get the latest version of nodejs
@@ -17,7 +18,9 @@ cd TeamAPoolProjectUI/
 
 git checkout Developer
 
-yes | sudo npm install
+sudo npm install
+
+yes | sudo npm -g install --save @angular/cli
 
 cd ../
 
@@ -31,17 +34,14 @@ git checkout Developer
 
 sudo npm install
 
-sudo apt install -y mongodb
-
 cd ../
 
 #out of the backend dir
 
-sudo cp mongodb.service /etc/systemd/system/
+sudo cp api.service /etc/systemd/system
+sudo cp ng.service /etc/systemd/system
 
 sudo systemctl daemon-reload
-
-yes | sudo npm install -g @angular/cli
-
-ng serve --host 0.0.0.0
-
+sudo systemctl start mongodb
+sudo systemctl start ng.service
+sudo systemctl start api.service
