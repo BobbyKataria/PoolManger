@@ -21,7 +21,7 @@ git checkout Developer
 
 npm install
 
-cd ../
+cd ..
 
 sudo cp api.service /etc/systemd/system
 
