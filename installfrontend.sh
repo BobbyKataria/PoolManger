@@ -17,12 +17,9 @@ cd TeamAPoolProjectUI/
 
 git checkout Developer
 
-npm install
+NG_CLI_ANALYTICS=ci npm install
 
-sudo su - << EOF
-export NG_CLI_ANALYTICS=ci 
-npm install -g @angular/cli
-EOF
+sudo NG_CLI_ANALYTICS=ci npm install -g @angular/cli
 
 cd ../
 
