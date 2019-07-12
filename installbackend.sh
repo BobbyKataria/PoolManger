@@ -3,7 +3,7 @@
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt install -y git
-
+sudo cp api.service /etc/systemd/system
 #get node
 
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -21,8 +21,6 @@ git checkout Developer
 npm install
 
 cd ..
-
-sudo cp api.service /etc/systemd/system
 
 sudo systemctl daemon-reload
 sudo systemctl restart api
