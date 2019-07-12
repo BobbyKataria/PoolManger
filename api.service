@@ -1,10 +1,10 @@
 [Unit]
-Description=Front end Index.js file
+Description=Front end Index.js file, make sure to change USER
 
 [Service]
-User=asiangauss
-ExecStart=/usr/bin/node /home/asiangauss/poolappScript/TeamAPoolProjectBackend/Index.js
-WorkingDirectory=/home/asiangauss/poolappScript/TeamAPoolProjectBackend
+User=adminbk
+ExecStart=/usr/bin/node /home/adminbk/poolappScript/TeamAPoolProjectBackend/Index.js
+WorkingDirectory=/home/adminbk/poolappScript/TeamAPoolProjectBackend
 
 [Install]
 WantedBy=multi-user.target
