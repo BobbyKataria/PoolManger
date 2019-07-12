@@ -11,7 +11,6 @@ sudo apt-get install -y nodejs
 
 #clone
 
-cd ~
 rm -rf TeamAPoolProjectBackend
 git clone https://github.com/Nboaram/TeamAPoolProjectBackend.git
 
