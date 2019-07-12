@@ -19,7 +19,10 @@ git checkout Developer
 
 npm install
 
-sudo NG_CLI_ANALYTICS=ci npm install -g @angular/cli
+sudo su - << EOF
+export NG_CLI_ANALYTICS=ci 
+npm install -g @angular/cli
+EOF
 
 cd ../
 
